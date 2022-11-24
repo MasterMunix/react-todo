@@ -14,7 +14,7 @@ const DATA = [
 
 
 export function ToDo(props) {
-    const [task, setTask] = useState({ name: "", completed: false });
+    const [task, setTask] = useState({});
     const [taskList, setTaskList] = useState([
         { id: "1", name: "Trapear", completed: false },
         { id: "2", name: "Cocinar", completed: true },

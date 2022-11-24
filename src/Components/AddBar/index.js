@@ -24,9 +24,7 @@ export function AddBar({ setTask, task, setTaskList }) {
         setError('');
 
         //Add the task written to the taskList in the ToDo Component
-        setTaskList(prevState => (
-            [...prevState, task]
-        ));
+        setTaskList({ name: e.target.value, id: `todo-${nanoid()}`, completed: false });
 
         //Set the input task to empty again
         e.target[0].value = "";
