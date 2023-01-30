@@ -8,7 +8,7 @@ export function AddBar({ setTask, task, setTaskList }) {
 
     const handleChange = (e) => {
         //Set the task to the input got it from the form
-        setTask({ ...task, name: e.target.value, id: `todo-${nanoid()}` });
+        setTask({ name: e.target.value, id: `todo-${nanoid()}`, completed: false });
     };
 
     const handleSubmit = (e) => {
@@ -24,7 +24,9 @@ export function AddBar({ setTask, task, setTaskList }) {
         setError('');
 
         //Add the task written to the taskList in the ToDo Component
-        setTaskList({ name: e.target.value, id: `todo-${nanoid()}`, completed: false });
+        setTaskList(prevState => (
+            [...prevState, task]
+        ));
 
         //Set the input task to empty again
         e.target[0].value = "";

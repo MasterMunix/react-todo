@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import * as components from '../';
 
+/**
+ * Used for creating a MOCKUP of the data to use.
+ */
 const DATA = [
     { name: "Barrer", completed: false },
     { name: "Do the dishes", completed: false },
@@ -9,6 +12,7 @@ const DATA = [
     { name: "Vacumm", completed: true },
     { name: "Iron the clothes", completed: false },
 ];
+
 
 
 
@@ -22,7 +26,8 @@ export function ToDo(props) {
         { id: "4", name: "Barrer", completed: false }
     ]);
 
-
+    console.log('Estoy en todo: ', taskList);
+    console.log('Estoy en todo: ', task);
     return (
         <>
             <div className="container">
