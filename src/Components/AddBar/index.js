@@ -37,25 +37,21 @@ export function AddBar({ setTask, task, setTaskList }) {
 
     return (
         <>
-            <div className="row">
-                <div className="col-5">
-                    {error}
-                    <form method="POST" onSubmit={handleSubmit} className="row">
-                        <div className="col-auto">
-                            <label className="sr-only" htmlFor="task">
-                                Task
-                            </label>
-                            <input type={'text'} className="form-control" id="task" placeholder="Introduce your task" name="task" onChange={handleChange} >
-                            </input>
-                        </div>
-                        <div className="col-auto align-self-end">
-                            <button type="submit" className="btn btn-primary mb-2">
-                                submit
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
+            <div class="row g-3 align-items-center pt-4">
+                {error}
+                <form method="POST" onSubmit={handleSubmit} className="row">
+                    <div class="col-auto">
+                        <label for="task" class="col-form-label">Task</label>
+                    </div>
+                    <div class="col-auto">
+                        <input type={'text'} className="form-control" id="task" placeholder="Introduce your task" name="task" onChange={handleChange} />
+                    </div>
+                    <div class="col-auto">
+                        <button type="submit" className="btn btn-primary mb-2">
+                            Submit
+                        </button>
+                    </div>
+                </form>
             </div>
             <br></br>
         </>

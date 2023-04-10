@@ -4,3 +4,4 @@ export { tasksDone } from './tasksDone';
 export { tasksNotDone } from './TasksNotDone';
 export { tasksTable } from './TasksTable';
 export { taskRow } from './taskRow';
+export {Footer} from './Footer';

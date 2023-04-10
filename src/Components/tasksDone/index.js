@@ -10,20 +10,23 @@ export function tasksDone({ data, taskList, setTaskList }) {
         <components.taskRow data={task} taskList={taskList} setTaskList={setTaskList} key={task.id} />
     ));
 
-    
+
 
     return (
-        <div className="row">
-            <div className="col-5">
-                <button className="btn btn-success dropdown-toggle" data-toggle="collapse" data-target="#tasksDone" type="button" >
-                    Tasks Done
-                </button>
-                <br></br>
-                <div className='collapse show' id='tasksDone'>
-                    {Task}
-                </div>
+        <>
 
+            <div className="row">
+                <div className="col-auto">
+                    <button className="btn btn-success dropdown-toggle" data-toggle="collapse" data-target="#tasksDone" type="button" >
+                        Tasks Done <span className='badge text-bg-danger'>{Task.length}</span>
+                    </button>
+                    <br></br>
+                    <div className='collapse show' id='tasksDone'>
+                        {Task}
+                    </div>
+
+                </div>
             </div>
-        </div>
+        </>
     );
 }

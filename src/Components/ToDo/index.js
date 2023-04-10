@@ -25,6 +25,7 @@ export function ToDo(props) {
         { id: "3", name: "Lavar", completed: true },
         { id: "4", name: "Barrer", completed: false }
     ]);
+    const footerData = "Ronny Reyes";
 
     console.log('Estoy en todo: ', taskList);
     console.log('Estoy en todo: ', task);
@@ -34,6 +35,7 @@ export function ToDo(props) {
                 <h2>ToDo APP</h2>
                 <components.AddBar setTask={setTask} task={task} setTaskList={setTaskList} />
                 <components.tasksTable data={DATA} task={task} taskList={taskList} setTaskList={setTaskList} />
+                <components.Footer footerData={footerData} ></components.Footer>
             </div>
         </>
 
